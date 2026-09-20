@@ -1,211 +1,426 @@
 # LIFE//RECEIPTS — Your Life, Decoded
 
-> An interactive digital life archaeology experience transforming fragmented digital activity footprints into an interconnected, evidence-backed story.
+> An interactive digital-life archaeology experience that transforms fragmented activity data into discoverable connections, insights, and an evidence-backed story.
 
-[![Vite](https://img.shields.io/badge/Vite-6.0-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
-[![React](https://img.shields.io/badge/React-18.3-61DAFB?logo=react&logoColor=white)](https://reactjs.org/)
-[![TailwindCSS](https://img.shields.io/badge/Tailwind-3.4-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![Deployment](https://img.shields.io/badge/Deployment-Vercel-black?logo=vercel&logoColor=white)](https://vercel.com/)
-[![Dataset](https://img.shields.io/badge/Data-Kaggle%20Attributed-20BEFF?logo=kaggle&logoColor=white)](https://www.kaggle.com/)
+[![React](https://img.shields.io/badge/React-18.3-61DAFB?logo=react&logoColor=white)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-6-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Deployment](https://img.shields.io/badge/Deployed_on-Vercel-black?logo=vercel&logoColor=white)](https://vercel.com/)
+[![Data](https://img.shields.io/badge/Data-Kaggle-20BEFF?logo=kaggle&logoColor=white)](https://www.kaggle.com/)
 
----
-
-## 1. Problem Statement
-A person's digital life contains hundreds of micro-moments recorded across fragmented platforms:
-- Songs streamed on Spotify
-- GPS location clusters and campus hubs
-- Credit card and wallet transactions
-- Calendar milestones and deadlines
-- Browsing searches and research inquiries
-- Personal notes and mood reflections
-
-Individually, these moments appear isolated and meaningless—a timestamp on a bank statement, an entry in a music history file. Current tools simply display linear chronological timelines or raw database tables. They answer **"What happened?"** but fail to answer:
-> **"What does it all mean?"**
+**Live Demo:** https://web-rush-2-0.vercel.app/  
+**GitHub:** https://github.com/Manushree-S/WebRush_2.0
 
 ---
 
-## 2. Solution: Digital Life Archaeology
-**LIFE//RECEIPTS** transforms raw digital logs into an interactive narrative:
+## 1. Overview
+
+Digital life is made up of hundreds of small moments — music played, places visited, purchases made, searches performed, events attended, and notes recorded.
+
+Viewed individually, these records appear disconnected.
+
+**LIFE//RECEIPTS** turns these fragments into an interactive experience that helps users explore:
+
+```text
+RAW DATA → EXPLORATION → PATTERNS → CONNECTIONS → INSIGHTS → STORY
 ```
-RAW DATA ──▶ EXPLORATION ──▶ PATTERNS ──▶ CONNECTIONS ──▶ INSIGHTS ──▶ STORY
-```
-Using an autonomous client-side connection engine, the application discovers hidden multi-dimensional relationships across time, physical co-location, and semantic tags to prove that what looked like disconnected fragments was actually one unified lived human moment.
+
+Instead of presenting a simple chronological timeline, the application identifies relationships across time, location, categories, and metadata to reveal meaningful moments within the dataset.
 
 ---
 
-## 3. Key Features
+## 2. Key Features
 
-### 🔍 1. Life Overview
-- Macro metrics calculated dynamically from raw logs: **Total Receipts**, **Active Categories**, **Monitored Days**, and **Discovered Links**.
-- Multi-modal channel breakdown (**Music**, **Places**, **Purchases**, **Events**, **Searches**, **Notes**) with visual progress meters and interactive category filtering.
-- Direct quick-launch calls to action: `[EXPLORE YOUR STORY]` and `[TELL MY STORY]`.
+### 🔍 Life Overview
 
-### 🗂 2. Interactive Receipt Explorer
-- Real-time global search across title, description, category, location, and tags.
-- Multi-dimensional filtering: Category pills, location hubs dropdown, and chronological / connection sorting.
-- Distinct tactile digital receipt styling with perforated borders, timestamps, and connection badges.
+A high-level view of the dataset with dynamically calculated metrics such as:
 
-### ⚡ 3. The Connection Engine (Primary Differentiator)
-- Detects meaningful relationships without inventing data:
-  - **Temporal Proximity**: Records occurring within $\le 45-60$ minutes.
-  - **Spatial Co-location**: Records sharing physical campus venues or GPS clusters.
-  - **Thematic & Tag Overlap**: Contextual keyword correlation (e.g. `#deepwork`, `#focus`, `#late-night`).
-  - **Cross-Category Fusion**: Simultaneous moments combining Music + Place + Purchase + Note.
-- Highlights grouped **"Connected Moments"** with precise mathematical explanations:
-  > *"4 life moments occurred within a 38-minute span at Baker-Berry Library."*
+- Total receipts
+- Active categories
+- Active days
+- Discovered connections
+- Category distribution
 
-### 🕸 4. Interactive Network Graph
-- Interactive SVG network canvas visualizing graph topology and cluster density.
-- Node degrees determine radius; color-coded by category icon.
-- Hovering traces connected links; clicking any node opens its receipt fragment.
-- Responsive mobile fallback automatically transitions into a vertically connected story flow.
+Users can directly navigate to the Explorer or Story Mode.
 
-### 💡 5. Autonomous Insights Engine
-- Algorithmic pattern mining detecting behavioral traits:
-  - **Night Owl Velocity**: Nocturnal concentration (10 PM to 4 AM) analysis.
-  - **The Anchor Sanctuary**: Spatial gravity well and dwell times.
-  - **The Soundtrack of Flow**: Ambient music correlation during deep work.
-  - **The Critical Nexus**: Single highest-degree moment in the entire network.
-  - **Fuel & Micro-Rituals**: Transaction timing preceding academic sprints.
-- Every insight card features an **`[EXPLORE THESE MOMENTS]`** button that pre-filters the Explorer directly to the supporting receipts.
+### 🧾 Interactive Receipt Explorer
 
-### 📖 6. Life Chapters
-- Temporal phase segmentation based on behavioral density and activity shifts:
-  1. **The Campus Baseline**: Orientation and daylight habits.
-  2. **The Midterm Sanctuary**: Immersion and algorithmic gravity at Baker-Berry.
-  3. **The Creative Reset**: Trail expansions and outdoor visual arts.
-  4. **The Nocturnal Sprint**: Hackathon velocity and midnight code.
-  5. **The Winter Reflection**: Solstice gathering and retrospective cooldown.
+Explore individual digital-life records through a searchable and filterable interface.
 
-### 🎭 7. Story Mode ("TELL MY STORY")
-- Fullscreen guided cinematic narrative with 6 progressive acts.
-- Poetic, evocative statements backed strictly by data observations.
-- Interactive **`[SHOW EVIDENCE]`** button on every scene revealing the exact receipts proving each statement.
-- Auto-play mode, keyboard navigation (Left/Right arrows, Escape), and finale celebration confetti.
+Features include:
 
-### 🗺 8. The Life Map
-- Integrated Leaflet map with OpenStreetMap CartoDB DarkMatter tiles.
-- Custom interactive markers displaying receipt densities at authentic campus coordinates.
-- Location sidebar detailing venue residency, category distributions, and chronological receipts.
+- Global search
+- Category filtering
+- Location filtering
+- Date-based exploration
+- Sorting
+- Receipt detail view
+- Connected-receipt indicators
+
+Each record is presented as a visual "life receipt" rather than a raw database entry.
+
+### 🔗 Connection Engine
+
+The core differentiating feature of LIFE//RECEIPTS.
+
+The client-side connection engine identifies relationships between records using available dataset attributes, including:
+
+- **Temporal proximity** — activities occurring close together in time
+- **Location relationships** — records associated with the same location or cluster
+- **Category relationships** — recurring combinations of activity types
+- **Tag and metadata overlap** — related contextual information
+- **Cross-category connections** — relationships between different types of activity
+
+Each discovered connection is supported by the underlying records rather than being presented as an unsupported assumption.
+
+### 🕸 Interactive Network Graph
+
+Connected records are represented as an interactive network.
+
+Users can:
+
+- Explore connected nodes
+- Identify clusters
+- Hover over relationships
+- Select individual records
+- Open detailed receipt information
+
+The visualization adapts to smaller screens through a mobile-friendly connected-story layout.
+
+### 💡 Insights
+
+The application derives data-driven observations from the available records.
+
+Examples include:
+
+- Activity concentration by time
+- Frequently occurring locations
+- Category patterns
+- Repeated activity combinations
+- Highly connected moments
+- Activity trends across different periods
+
+Each insight can lead users back to the supporting receipts for verification.
+
+### 📖 Life Chapters
+
+The dataset is segmented into meaningful periods based on changes in activity density and patterns.
+
+Each chapter presents:
+
+- Time period
+- Dominant activity categories
+- Key moments
+- Relevant connections
+- Supporting observations
+
+This provides a higher-level view of how activity patterns evolve over time.
+
+### 🎭 Story Mode
+
+**TELL MY STORY** converts discovered patterns and connections into a guided narrative experience.
+
+Key features:
+
+- Multi-stage storytelling
+- Evidence-backed observations
+- Supporting receipt references
+- Interactive navigation
+- Auto-play mode
+- Keyboard navigation
+- Visual finale
+
+The narrative is generated from observations derived from the dataset rather than invented personal information.
+
+### 🗺 Life Map
+
+When location information is available, the application provides a visual representation of activity across locations.
+
+Features include:
+
+- Interactive map
+- Location markers
+- Receipt density
+- Category distribution
+- Location details
+- Related chronological activity
+
+The map uses Leaflet with OpenStreetMap-based mapping data.
 
 ---
 
-## 4. Dataset & Kaggle Attribution
+## 3. Dataset & Attribution
 
-In strict adherence to hackathon guidelines, all receipts are harmonized and normalized from publicly available open Kaggle research datasets:
+The application uses publicly available Kaggle datasets that are normalized into a common digital-life receipt format.
 
-| Life Channel | Primary Kaggle Dataset | Kaggle Slug / URL | Fields Extracted |
-| :--- | :--- | :--- | :--- |
-| **PLACES & LOCATIONS** | Dartmouth StudentLife Mobile Sensing | [`dartweichen/studentlife`](https://www.kaggle.com/datasets/dartweichen/studentlife) | GPS Coordinates, Semantic Venue Clusters, Dwell Times |
-| **MUSIC & AUDIO** | Spotify Extended Streaming History | [`szymonjanowski/spotify-extended-history`](https://www.kaggle.com/datasets/szymonjanowski/spotify-extended-streaming-history-2013-2024) | Track Titles, Artists, Durations, Timestamps |
-| **PURCHASES** | Digital Wallet & Personal Transactions | [`ismatsamadov/transactions-dataset`](https://www.kaggle.com/datasets/ismatsamadov/transactions-dataset) | Merchant Names, Expense Categories, Amounts ($) |
-| **EVENTS & CALENDAR** | Dartmouth StudentLife Mobile Sensing | [`dartweichen/studentlife`](https://www.kaggle.com/datasets/dartweichen/studentlife) | Academic Deadlines, Hackathon Milestones, Gatherings |
-| **SEARCHES** | StudentLife Mobile Sensing Logs | [`dartweichen/studentlife`](https://www.kaggle.com/datasets/dartweichen/studentlife) | Research Queries, Inquiries, Device Context |
-| **NOTES** | StudentLife EMA Survey Logs | [`dartweichen/studentlife`](https://www.kaggle.com/datasets/dartweichen/studentlife) | EMA Reflection Logs, Mood Prompts, Focus Journals |
+The project combines relevant data sources to represent different dimensions of digital activity.
 
-### Normalization Layer (`src/data/normalizedData.js`)
-All entries are mapped into the canonical receipt schema:
-```typescript
-interface NormalizedReceipt {
-  id: string;
-  timestamp: string;          // ISO 8601
-  category: "MUSIC" | "PLACES" | "PURCHASES" | "EVENTS" | "SEARCHES" | "NOTES";
-  title: string;
-  description: string;
-  location: string | null;
-  coordinates: { lat: number; lng: number } | null;
-  value: number | null;       // USD amount for transactions
-  tags: string[];
-  metadata: Record<string, any>;
+| Category | Dataset | Source |
+|---|---|---|
+| Places & Locations | Dartmouth StudentLife Mobile Sensing | [Kaggle](https://www.kaggle.com/datasets/dartweichen/studentlife) |
+| Music & Audio | Spotify Extended Streaming History | [Kaggle](https://www.kaggle.com/datasets/szymonjanowski/spotify-extended-streaming-history-2013-2024) |
+| Purchases | Transactions Dataset | [Kaggle](https://www.kaggle.com/datasets/ismatsamadov/transactions-dataset) |
+| Events / Activity | StudentLife Mobile Sensing | [Kaggle](https://www.kaggle.com/datasets/dartweichen/studentlife) |
+| Searches / Text Activity | StudentLife-related activity data | [Kaggle](https://www.kaggle.com/datasets/dartweichen/studentlife) |
+| Notes / Reflections | StudentLife EMA data | [Kaggle](https://www.kaggle.com/datasets/dartweichen/studentlife) |
+
+### Data Normalization
+
+Different source datasets are transformed into a common receipt structure:
+
+```text
+{
+  id,
+  timestamp,
+  category,
+  title,
+  description,
+  location,
+  coordinates,
+  value,
+  tags,
+  metadata
 }
 ```
-*Zero Hallucinations: No personal facts, dates, or relations are fabricated. Optional fields remain `null` when not present.*
+
+This normalization allows different types of records to be explored and connected through a common interface.
+
+The application does not require a backend or external database; data processing is performed client-side.
 
 ---
 
-## 5. Tech Stack & Architecture
+## 4. Connection & Insight Approach
 
-- **Frontend**: React 18, Vite 6, JavaScript
-- **Styling**: Tailwind CSS, PostCSS, Custom Perforated Receipt Effects
-- **Icons**: Lucide React
-- **Geospatial**: Leaflet + CartoDB DarkMatter Tiles (OpenStreetMap)
-- **Effects**: Canvas Confetti
-- **Processing**: 100% Client-Side In-Browser Graph Algorithms & Memoization
-- **Backend / Database**: None (Zero server-side dependencies, pure static deployment)
+The project focuses on moving beyond:
 
+```text
+Raw Data → Information
 ```
+
+towards:
+
+```text
+Raw Data → Insights → Connections → Story
+```
+
+Connections are derived from available data attributes such as:
+
+```text
+Time
+  ↓
+Location
+  ↓
+Category
+  ↓
+Tags / Metadata
+  ↓
+Related Activity
+```
+
+For example, several records occurring within the same time window and location can be grouped into a **Connected Moment**.
+
+These relationships are then used by the Insights, Chapters, and Story Mode experiences.
+
+---
+
+## 5. Tech Stack
+
+### Frontend
+
+- React 18
+- Vite 6
+- JavaScript
+- Tailwind CSS
+
+### Visualization & UI
+
+- Lucide React
+- Leaflet
+- OpenStreetMap-based map tiles
+- SVG-based network visualization
+- Canvas Confetti
+
+### Data Processing
+
+- Client-side JavaScript
+- Custom connection algorithms
+- Derived statistics and insights
+- Memoized data processing
+
+### Backend
+
+**None**
+
+The application is completely frontend-only and does not use:
+
+- Backend servers
+- External databases
+- Authentication services
+- Server-side application logic
+
+---
+
+## 6. Project Structure
+
+```text
 src/
 ├── data/
-│   ├── dataset.json            # 379 normalized multi-modal receipts
-│   └── normalizedData.js       # Accessors, categories & filtering helpers
+│   ├── dataset.json
+│   └── normalizedData.js
+│
 ├── utils/
-│   ├── connectionEngine.js     # Adjacency graph & connected moments clustering
-│   ├── insightsEngine.js       # Algorithmic pattern mining
-│   ├── chaptersEngine.js       # Narrative era segmentation
-│   ├── storyEngine.js          # Evidence-backed guided storytelling
-│   └── formatters.js           # Date, currency, duration helpers
+│   ├── connectionEngine.js
+│   ├── insightsEngine.js
+│   ├── chaptersEngine.js
+│   ├── storyEngine.js
+│   └── formatters.js
+│
 ├── components/
-│   ├── common/                 # Header, ReceiptBadge
-│   ├── Overview/               # LifeOverview hero, metrics, channel cards
-│   ├── Explorer/               # ReceiptExplorer, ReceiptCard, FilterBar
-│   ├── Connections/            # ConnectionEngineView, NetworkGraph, ClusterCard
-│   ├── Insights/               # InsightsView, InsightCard
-│   ├── Chapters/               # ChaptersView, ChapterCard
-│   ├── Story/                  # StoryMode fullscreen guided narrative
-│   ├── LifeMap/                # LifeMapView Leaflet map & location drawer
-│   └── ReceiptDetail/          # ReceiptDetailModal deep-dive inspector
-├── App.jsx                     # Root application shell & state orchestration
-├── main.jsx                    # React entrypoint
-└── index.css                   # Tailwind directives & receipt styling
+│   ├── common/
+│   ├── Overview/
+│   ├── Explorer/
+│   ├── Connections/
+│   ├── Insights/
+│   ├── Chapters/
+│   ├── Story/
+│   ├── LifeMap/
+│   └── ReceiptDetail/
+│
+├── App.jsx
+├── main.jsx
+└── index.css
 ```
 
 ---
 
-## 6. Local Setup & Execution
+## 7. Local Development
 
 ### Prerequisites
-- Node.js 18+ or 20+ (tested on Node v24.13.0)
-- npm 9+ or 11+
 
-### Installation & Run
+- Node.js 18+
+- npm
+
+### Installation
+
 ```bash
-# 1. Clone or navigate to the project directory
 git clone https://github.com/Manushree-S/WebRush_2.0.git
 cd WebRush_2.0
-
-# 2. Install dependencies
 npm install
+```
 
-# 3. Start development server
+### Start Development Server
+
+```bash
 npm run dev
-# The application will launch at http://localhost:3000/
+```
 
-# 4. Create production build
+Open the local URL shown by Vite in the terminal.
+
+### Production Build
+
+```bash
 npm run build
+```
 
-# 5. Preview production build locally
+### Preview Production Build
+
+```bash
 npm run preview
 ```
 
 ---
 
-## 7. Deployment & Vercel Compatibility
+## 8. Deployment
 
-This application contains zero backend services and builds cleanly to static assets in `dist/`.
-- **Framework**: Vite
-- **Build Command**: `npm run build`
-- **Output Directory**: `dist`
-- Pre-configured `vercel.json` included for single-page routing rewrites.
+The application is deployed on Vercel as a Vite frontend application.
+
+### Vercel Configuration
+
+```text
+Framework: Vite
+Build Command: npm run build
+Output Directory: dist
+```
+
+### Live Application
+
+**https://web-rush-2-0.vercel.app/**
+
+GitHub pushes to the connected repository can be used to trigger updated Vercel deployments.
 
 ---
 
-## 8. Limitations & Future Roadmap
-- **Custom User File Ingestion**: Future iterations can permit users to drag-and-drop their own Google Takeout, Apple Health, or Spotify Streaming JSON exports to run the client-side Connection Engine on personal data.
-- **WebGL Accelerated 3D Graphs**: Upgrading the 2D SVG Network Graph to Three.js / Force-Graph-3D for datasets exceeding 5,000+ receipts.
-- **Local LLM Narrator**: Pairing client-side WebLLM (via WebGPU) for conversational dialogue about discovered life moments.
+## 9. Responsive & Accessible Design
+
+The application is designed for:
+
+- Desktop
+- Tablet
+- Mobile
+
+Accessibility considerations include:
+
+- Semantic HTML
+- Keyboard navigation
+- Visible focus states
+- Accessible interactive controls
+- Responsive layouts
+- Color-independent category identification
+- Mobile-friendly interaction patterns
 
 ---
 
-## 9. License & Attribution
-- Built with ❤️ for the WebRush 2.0 Hackathon.
-- Research dataset attributions to Dartmouth College StudentLife Project, Spotify EDA Research, and Kaggle Community contributors.
+## 10. Performance
+
+The application performs data processing in the browser and avoids unnecessary backend infrastructure.
+
+Performance considerations include:
+
+- Client-side data processing
+- Memoized derived data
+- Efficient filtering
+- Lightweight visualization
+- Static production deployment
+
+---
+
+## 11. Future Improvements
+
+Potential future enhancements include:
+
+- User-uploaded digital activity datasets
+- Support for additional personal-data formats
+- Larger-scale graph visualization
+- More advanced semantic relationship detection
+- Interactive natural-language exploration of discovered patterns
+- Additional visualization modes for large datasets
+
+---
+
+## 12. Hackathon Context
+
+Built for **WebRush 2.0** as a frontend-only solution to the challenge:
+
+> **One Dataset. Hundreds of Moments. Infinite Stories. Six Hours to Uncover One.**
+
+The project focuses on transforming disconnected activity records into an interactive and evidence-backed digital story.
+
+---
+
+## 13. License & Attribution
+
+Built for the WebRush 2.0 Hackathon.
+
+Dataset sources are attributed to their respective Kaggle contributors and original projects.
+
+Third-party libraries and mapping services remain subject to their respective licenses and terms.
+
+---
+
+## ⭐ Core Idea
+
+LIFE//RECEIPTS is built around one simple question:
+
+> **What if disconnected digital moments could tell a story when viewed together?**
+
+**Explore the data. Connect the moments. Discover the story.**
