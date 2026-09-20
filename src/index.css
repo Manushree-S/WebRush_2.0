@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#0B0F17] text-slate-100 antialiased overflow-x-hidden;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Custom receipt perforated styling */
+.receipt-perforated {
+  position: relative;
+  background-color: #131A29;
+}
+
+.receipt-perforated::before,
+.receipt-perforated::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background-size: 14px 6px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.receipt-perforated::before {
+  top: -6px;
+  background-image: radial-gradient(circle at 7px 6px, transparent 5px, #131A29 6px);
+}
+
+.receipt-perforated::after {
+  bottom: -6px;
+  background-image: radial-gradient(circle at 7px 0px, transparent 5px, #131A29 6px);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0F17;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #232D42;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #374665;
+}
+
+/* Pulse glow animations */
+@keyframes subtle-glow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+.animate-subtle-glow {
+  animation: subtle-glow 4s ease-in-out infinite;
+}
